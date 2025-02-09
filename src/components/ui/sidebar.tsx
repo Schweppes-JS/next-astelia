@@ -1,20 +1,19 @@
 "use client";
 
 import { type VariantProps, cva } from "class-variance-authority";
-import { usePathname } from "next/navigation";
 import { Slot } from "@radix-ui/react-slot";
 import { ChevronRight } from "lucide-react";
 import * as React from "react";
-import Link from "next/link";
 
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Sheet, SheetContent } from "@/components/ui/sheet";
+import { Separator } from "@/components/ui/separator";
+import { Skeleton } from "@/components/ui/skeleton";
+import { Link, usePathname } from "@/i18n/routing";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Separator } from "@/components/ui/separator";
-import { Sheet, SheetContent } from "@/components/ui/sheet";
-import { Skeleton } from "@/components/ui/skeleton";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { cn } from "@/lib/utils";
 
 const SIDEBAR_COOKIE_NAME = "sidebar:state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
@@ -220,8 +219,6 @@ const SidebarTrigger = React.forwardRef<React.ElementRef<typeof Button>, React.C
   ({ className, onClick, ...props }, ref) => {
     const { toggleSidebar, open } = useSidebar();
 
-    console.log({ open });
-
     return (
       <Button
         ref={ref}
@@ -248,7 +245,7 @@ const SidebarInset = React.forwardRef<HTMLDivElement, React.ComponentProps<"main
     <main
       ref={ref}
       className={cn(
-        "relative flex min-h-svh flex-1 flex-col bg-background",
+        "relative flex min-h-svh flex-1 flex-col bg-background max-h-screen overflow-auto",
         "peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow",
         className
       )}
@@ -273,7 +270,7 @@ const SidebarInput = React.forwardRef<React.ElementRef<typeof Input>, React.Comp
 SidebarInput.displayName = "SidebarInput";
 
 const SidebarHeader = React.forwardRef<HTMLDivElement, React.ComponentProps<"div">>(({ className, ...props }, ref) => {
-  return <div ref={ref} data-sidebar="header" className={cn("flex flex-col gap-2 p-4", className)} {...props} />;
+  return <div ref={ref} data-sidebar="header" className={cn("flex flex-col gap-2 p-4 pb-0", className)} {...props} />;
 });
 SidebarHeader.displayName = "SidebarHeader";
 
@@ -294,7 +291,7 @@ const SidebarContent = React.forwardRef<HTMLDivElement, React.ComponentProps<"di
     <div
       ref={ref}
       data-sidebar="content"
-      className={cn("flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden p-4", className)}
+      className={cn("flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden p-4 pt-1", className)}
       {...props}
     />
   );
