@@ -16,7 +16,7 @@ export const scenario: ReactFlowProps<CustomeNodeType> = {
       id: "1",
     },
     {
-      data: { title: "PC", subtitle: "123.108.50.107" },
+      data: { title: "User", subtitle: "123.108.50.107" },
       sourcePosition: Position.Left,
       targetPosition: Position.Right,
       position: { x: 300, y: 100 },

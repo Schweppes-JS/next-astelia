@@ -9,13 +9,13 @@ export const MachineNode = ({ data }: CustomeNodeProps) => {
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <div className="flex flex-col items-center gap-1">
+        <div className="flex flex-col items-center gap-1 cursor-pointer">
           <div className="p-4 bg-chart-2 rounded-full shadow-md">
             <Server style={{ color: "hsl(var(--chart-3))" }} />
             <Handle type="target" position={Position.Left} />
             <Handle type="source" position={Position.Right} />
           </div>
-          <Label className="underline cursor-pointer">{data.title}</Label>
+          <Label className="cursor-pointer">{data.title}</Label>
         </div>
       </PopoverTrigger>
       <PopoverContent className="flex justify-center w-40">

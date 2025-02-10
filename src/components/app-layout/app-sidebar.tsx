@@ -17,11 +17,11 @@ import {
 
 import { navigationConfig } from "./navigation-config";
 
-export const AppSidebar = () => {
+export const AppSidebar = (props: Omit<Parameters<typeof Sidebar>[0], "ref">) => {
   const t = useTranslations();
 
   return (
-    <Sidebar>
+    <Sidebar {...props}>
       <SidebarHeader>
         <SidebarMenu>
           {navigationConfig.header.map(({ titleKey, url, src, Icon }) => (

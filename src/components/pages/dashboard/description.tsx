@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { RemediationPlanTable } from "./remediation-plan-table";
 
 export const DashboardDescription = () => {
   const t = useTranslations("DASHBOARD.DESCRIPTION");
@@ -24,7 +25,9 @@ export const DashboardDescription = () => {
       </CardContent>
       <CardContent className="space-y-1.5">
         <CardTitle>{t("REMEDIATION_PLANS.TITLE")}</CardTitle>
-        <CardDescription>{t("REMEDIATION_PLANS.CONTENT")}</CardDescription>
+        <CardDescription>
+          <RemediationPlanTable />
+        </CardDescription>
       </CardContent>
     </Card>
   );

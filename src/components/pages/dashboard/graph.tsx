@@ -3,9 +3,11 @@
 import { useTranslations } from "next-intl";
 import { ReactFlow } from "@xyflow/react";
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
+import { ContextualRiskTable } from "./contextual-risk-table";
+import { ContextualRiskChart } from "./contextual-risk-chart";
 import { scenario } from "./scenario-config";
 import { NodeLegends } from "./node-legends";
 
@@ -31,6 +33,10 @@ export const DashboardGraph = () => {
       <CardContent className="space-y-1.5">
         <CardTitle>{t("RISK.TITLE")}</CardTitle>
       </CardContent>
+      <CardFooter className="gap-4 items-start">
+        <ContextualRiskTable />
+        <ContextualRiskChart />
+      </CardFooter>
     </Card>
   );
 };

@@ -19,14 +19,15 @@ export default async function LocaleLayout({ children, params }: LayoutPropsType
   const { locale } = await params;
   if (!routing.locales.includes(locale)) notFound();
   const messages = await getMessages();
+  const isRTL = locale === "he";
 
   return (
-    <html lang={locale} className={`${GeistSans.variable}`}>
+    <html lang={locale} className={`${GeistSans.variable}`} dir={isRTL ? "rtl" : "ltr"}>
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <NextIntlClientProvider messages={messages}>
             <SidebarProvider>
-              <AppSidebar />
+              <AppSidebar side={isRTL ? "right" : "left"} />
               <SidebarInset>{children}</SidebarInset>
             </SidebarProvider>
           </NextIntlClientProvider>

@@ -3,11 +3,9 @@ import { useSearchParams } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { CardContent, CardHeader } from "@/components/ui/card";
 import { usePathname, useRouter } from "@/i18n/routing";
 import { type AppLocaleType } from "@/types/app-types";
 import { Label } from "@/components/ui/label";
-import { Fragment } from "react";
 
 export const LanguageSwitcher = () => {
   const t = useTranslations("SETTINGS.LANGUAGE_SWITCHER");

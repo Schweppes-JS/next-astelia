@@ -88,3 +88,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+html[dir="rtl"] {
+  direction: rtl;
+}
+
+html[dir="ltr"] {
+  direction: ltr;
+}
