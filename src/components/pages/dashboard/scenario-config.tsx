@@ -1,6 +1,6 @@
 import { Position, type ReactFlowProps } from "@xyflow/react";
 
-import { type CustomeNodeType } from "@/types/react-flow-type";
+import { NodeStatusEnum, type CustomeNodeType } from "@/types/react-flow-type";
 import { MachineNode } from "@/components/nodes/machine-node";
 import { MalwareNode } from "@/components/nodes/malware-node";
 import { UserNode } from "@/components/nodes/user-node";
@@ -9,7 +9,7 @@ export const scenario: ReactFlowProps<CustomeNodeType> = {
   nodeTypes: { machineNode: MachineNode, malwareNode: MalwareNode, userNode: UserNode },
   nodes: [
     {
-      data: { title: "Internet", subtitle: "30.24.182.134" },
+      data: { title: "Internet", subtitle: "30.24.182.134", status: NodeStatusEnum.caution },
       sourcePosition: Position.Right,
       position: { x: 100, y: 100 },
       type: "malwareNode",
@@ -32,7 +32,7 @@ export const scenario: ReactFlowProps<CustomeNodeType> = {
       id: "3",
     },
     {
-      data: { title: "PC", subtitle: "119.11.178.239" },
+      data: { title: "PC", subtitle: "119.11.178.239", status: NodeStatusEnum.destructive },
       sourcePosition: Position.Left,
       targetPosition: Position.Right,
       position: { x: 700, y: 50 },
@@ -40,7 +40,7 @@ export const scenario: ReactFlowProps<CustomeNodeType> = {
       id: "4",
     },
     {
-      data: { title: "PC", subtitle: "41.55.224.75" },
+      data: { title: "PC", subtitle: "41.55.224.75", status: NodeStatusEnum.destructive },
       sourcePosition: Position.Right,
       targetPosition: Position.Left,
       position: { x: 700, y: 150 },
