@@ -31,8 +31,8 @@ export const navigationConfig = {
     { titleKey: "LAYOUT.NAVIGATION.REPORTS", url: "/reports", Icon: ChartNoAxesGantt },
   ],
   footer: [
-    { titleKey: "LAYOUT.NAVIGATION.SETTINGS", url: "/setting", Icon: Settings },
-    { titleKey: "LAYOUT.NAVIGATION.NOTIFICATIONS", url: "/notifications", Icon: MessageSquareDot },
+    { titleKey: "LAYOUT.NAVIGATION.SETTINGS", url: "/setting", Icon: Settings, src: undefined },
+    { titleKey: "LAYOUT.NAVIGATION.NOTIFICATIONS", url: "/notifications", Icon: MessageSquareDot, src: undefined },
     { titleKey: "LAYOUT.NAVIGATION.LOGOUT", url: "/login", Icon: LogOut, src: "https://avatars.githubusercontent.com/u/68691816?v=4" },
   ],
-};
+} as const;

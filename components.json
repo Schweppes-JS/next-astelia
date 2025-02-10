@@ -17,7 +17,8 @@
     "lib": "@/lib",
     "hooks": "@/hooks",
     "constants": "@/constants",
-    "providers": "@/providers"
+    "providers": "@/providers",
+    "app": "@/app"
   },
   "iconLibrary": "lucide"
 }

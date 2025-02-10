@@ -3,7 +3,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { GeistSans } from "geist/font/sans";
 import { notFound } from "next/navigation";
 
-import { type GenerateMetadataType, type LayoutPropsType } from "@/types/appTypes";
+import { type GenerateMetadataType, type LayoutPropsType } from "@/types/app-types";
 import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { AppSidebar } from "@/components/app-layout";

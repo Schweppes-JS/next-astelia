@@ -9,7 +9,7 @@ const LoginPage = () => {
     <div className="flex min-h-screen flex-col p-6">
       <Card>
         <CardHeader>
-          <h2 className="text-2xl font-bold">{t("LOGIN")}</h2>
+          <h2 className="text-2xl font-bold">{t("LOGOUT")}</h2>
         </CardHeader>
       </Card>
     </div>
