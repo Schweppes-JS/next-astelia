@@ -1,0 +1,61 @@
+{
+  "LAYOUT": {
+    "META": {
+      "TITLE": "Astelia",
+      "DESCRIPTION": "Code. Innovate. Elevate.",
+      "KEYWORDS": "Cybersecurity"
+    },
+    "HEADLINE": {
+      "COMPANY_NAME": "Astelia"
+    },
+    "NAVIGATION": {
+      "DASHBOARD": "Dashboard",
+      "THREAT_SCENARIOUS": "Threat Scenarious",
+      "INVENTORY": "Inventory",
+      "ISSUES": "Issues",
+      "POLICIES": "Policies",
+      "INTEGRATIONS": "Integrations",
+      "REPORTS": "Reports",
+      "SETTINGS": "Settings",
+      "NOTIFICATIONS": "Notifications",
+      "LOGOUT": "Logout"
+    }
+  },
+  "DASHBOARD": {
+    "DESCRIPTION": {
+      "OVERVIEW": {
+        "TITLE": "Scenario Overview",
+        "CONTENT": "Lorem ipsum dolor sit amet consectetur. Tempus a id adipiscing fames egestas tellus dis pretium tempus. Justo nisl nisl lorem lectus id ornare. Rhoncus in egestas in amet porttitor pellentesque sit. Amet gravida integer velit felis. Eu consectetur interdum auctor sed aliquam. Eu pulvinar accumsan sed id. Duis a aliquam eu quisque commodo lectus. Lectus ipsum velit purus viverra vulputate viverra in nunc nulla. Euismod rhoncus mauris urna orci gravida sagittis netus. Amet mus in vel etiam. Interdum habitant congue massa in etiam sit. Commodo nibh viverra lobortis augue lorem quam lorem suspendisse."
+      },
+      "ATTACK_PATH": {
+        "TITLE": "Attack path",
+        "CONTENT": "Lorem ipsum dolor sit amet consectetur. Tempus a id adipiscing fames egestas tellus dis pretium tempus. Justo nisl nisl lorem lectus id ornare. Rhoncus in egestas in amet porttitor pellentesque sit. Amet gravida integer velit felis. Eu consectetur interdum auctor sed aliquam. Eu pulvinar accumsan sed id. Duis a aliquam eu quisque commodo lectus. Lectus ipsum velit purus viverra vulputate viverra in nunc nulla. Euismod rhoncus mauris urna orci gravida sagittis netus. Amet mus in vel etiam. Interdum habitant congue massa in etiam sit. Commodo nibh viverra lobortis augue lorem quam lorem suspendisse."
+      },
+      "REMEDIATION_PLANS": {
+        "TITLE": "Remediation Plans",
+        "CONTENT": "Lorem ipsum dolor sit amet consectetur. Tempus a id adipiscing fames egestas tellus dis pretium tempus. Justo nisl nisl lorem lectus id ornare. Rhoncus in egestas in amet porttitor pellentesque sit. Amet gravida integer velit felis. Eu consectetur interdum auctor sed aliquam. Eu pulvinar accumsan sed id. Duis a aliquam eu quisque commodo lectus. Lectus ipsum velit purus viverra vulputate viverra in nunc nulla. Euismod rhoncus mauris urna orci gravida sagittis netus. Amet mus in vel etiam. Interdum habitant congue massa in etiam sit. Commodo nibh viverra lobortis augue lorem quam lorem suspendisse."
+      }
+    },
+    "GRAPH": {
+      "SCENARIO": { "TITLE": "Scenario" },
+      "RISK": { "TITLE": "Contextual Risk" }
+    }
+  },
+  "SETTINGS": {
+    "WRAPPER": {
+      "TITLE": "Settings"
+    },
+    "LANGUAGE_SWITCHER": {
+      "PLACEHOLDER": "Select a language",
+      "LANGUAGE": "Language",
+      "HEBREW": "Hebrew",
+      "ENGLISH": "English"
+    },
+    "MODE_TOGGLER": {
+      "PLACEHOLDER": "Toggle theme",
+      "LIGHT": "Light",
+      "DARK": "Dark",
+      "SYSTEM": "System"
+    }
+  }
+}
